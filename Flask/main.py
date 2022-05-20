@@ -80,7 +80,7 @@ def contact():
     useremail = request.form.get("email")
     usermessage = request.form.get("message")
 
-    return render_template("contactok.html", name=nickname, email=useremail, msg=usermessage)
+    return render_template("contactok.html", nickname=nickname, email=useremail, msg=usermessage)
 
 # 註冊
 
@@ -305,7 +305,7 @@ vectorizer = pickle.load(open('./tranform.pkl','rb'))
 
 # #給指令派切換用之路徑
 def get_suggestions():
-    data = pd.read_csv('../The-Movie/main_data.csv')
+    data = pd.read_csv('./main_data.csv')
     return list(data['movie_title'].str.capitalize())
 
 # ----------------------跟js網頁溝通----------------------#
@@ -471,4 +471,4 @@ class TempArea:
 
 # 啟動
 if __name__ == "__main__":
-    app.run(debug=True, host="0.0.0.0", port=3000)  # 啟動server
+    app.run(debug=True, host="0.0.0.0", port=80)  # 啟動server

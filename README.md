@@ -1,2 +1,2 @@
 # Flask
-AIClass 小組專案
+AIClass 小組專案Pro

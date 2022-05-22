@@ -168,7 +168,8 @@ def indexuser():
         # 非法請求，直接導回首頁
         print("登入狀態:", __islogin__)
         return redirect("/")
-
+        
+@app.route("/movie1")
 @app.route("/profile")
 def profile():
     #usermessage_ ="歡迎~"
